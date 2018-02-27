@@ -1,16 +1,21 @@
 #include<iostream>
-#include <ctime>
-#include <Windows.h>
+#include<fstream>
+#include<string>
 using namespace std;
 int main() {
-	srand(time(NULL));
-	while (1) {
-		int a = (rand() % 1800 + 200);
-		int b = (rand() % 1800 + 200);
-
-		Beep(a, b);
+	string line;
+	ifstream myfile("prog01.in.txt");
+	if (myfile.is_open())
+	{
+		while (getline(myfile, line))
+		{
+			cout << line << endl;
+			cout << line << endl;
+		}
+		myfile.close();
 
 	}
-
-
+	else
+		cout << "Unable to open file";
+	system("pause");
 }

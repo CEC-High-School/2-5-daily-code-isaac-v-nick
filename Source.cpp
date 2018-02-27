@@ -1,16 +1,16 @@
-#include <iostream>
+#include<iostream>
+#include <ctime>
+#include <Windows.h>
 using namespace std;
 int main() {
-	double a;
-		double input;
-		cout << "what is one side of a cube" << endl;
-		cin >> input;
-		cout << 6 * input + 6 * input << endl;
-		cout << input*input*input << endl;
+	srand(time(NULL));
+	while (1) {
+		int a = (rand() % 1800 + 200);
+		int b = (rand() % 1800 + 200);
 
+		Beep(a, b);
 
-
-
+	}
 
 
 }
